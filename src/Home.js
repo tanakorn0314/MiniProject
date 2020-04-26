@@ -14,10 +14,12 @@ class Home extends Component {
 
     render() {
         return (
+        <form>
         <div className="col-md-6">
         <h1>Welcome to soutern infomation technology</h1>
         <botton onClick={this.logout} style={{marginLeft: '25px'}}>Logout</botton>
-        </div>   
+        </div> 
+        </form>  
         );
 
     }
