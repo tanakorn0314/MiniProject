@@ -39,9 +39,8 @@ class Login extends Component {
     return (
       <div className="classes.root">
         <form>
-
           <div class="form-group">
-            <label for="exampleInputEmail1"><h1>Email address</h1></label>
+            <label for="exampleInputEmail1"><h3>Email address</h3></label>
             <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" /><br></br>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
@@ -49,7 +48,7 @@ class Login extends Component {
 
 
         <div class="form-group">
-          <label for="exampleInputPassword1"><h1>Password</h1></label>
+          <label for="exampleInputPassword1"><h3>Password</h3></label>
           <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
         </div>
 

@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import fire from './config/Fire';
+import Admin from './Admin';
+import About from './About';
+import {BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import Nav   from './Nav';
 
 class Home extends Component {
     constructor(props) {
@@ -14,14 +18,20 @@ class Home extends Component {
 
     render() {
         return (
+        <Router>
         <form>
         <div className="col-md-6">
-        <h1>Welcome to soutern infomation technology</h1>
+        <Nav />
+        <Switch>
+        <Route   path="/About" exact component={About}/>
+        <Route   path="/Admin" exact component={Admin}/>
         <botton onClick={this.logout} style={{marginLeft: '25px'}}>Logout</botton>
-        </div> 
+        </Switch>
+        
+        </div>
         </form>  
+        </Router>
         );
-
     }
 
 }
