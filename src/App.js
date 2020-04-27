@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import {BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import fire from './config/Fire';
 import Home from './Home';
 import Login from './Login';
@@ -34,20 +33,13 @@ class App extends Component {
   }
   render() {
     return (
-      <Router>
+
       <div className="App">
-        <Switch>
-        <Route   path="" exact component={home}/>
-        </Switch>
-      {this.state.user ?  ( < Home/>) : (< Login />)};
+
+      {this.state.user ?  ( < Home/>) : (< Login />)}
       </div>
-      </Router>
     );
   }
 }
-const home = () =>(
-  <div>
-    <h1>Soutern Infomation Technology</h1><br></br><br></br>
-  </div>
-)
+
 export default App;

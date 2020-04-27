@@ -37,24 +37,26 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="classes.root">
+      <div class="container p-3 my-3 bg-dark text-white">
+        <main role="main" className="container" style={{ marginTop: 50 }}>
         <form>
           <div class="form-group">
-            <label for="exampleInputEmail1"><h3>Email address</h3></label>
-            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" /><br></br>
+            <label for="exampleInputEmail1"><h3 class="text-success" >Email address</h3></label><br></br>
+            <input value={this.state.email} onChange={this.handleChange} type="email" name="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" /><br></br>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <br></br>
 
 
         <div class="form-group">
-          <label for="exampleInputPassword1"><h3>Password</h3></label>
-          <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+          <label for="exampleInputPassword1"><h3 class="text-success">Password</h3></label><br></br>
+          <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="exampleInputPassword1" placeholder="Password" />
         </div>
 
         <button type="submit" onClick={this.login} class="btn btn-primary">Login</button>
         <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">Sign-up</button>
         </form>
+        </main>
       </div>
     );
   }

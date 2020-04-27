@@ -20,12 +20,12 @@ class Home extends Component {
         return (
         <Router>
         <form>
-        <div className="col-md-6">
+        <div className="">
         <Nav />
         <Switch>
         <Route   path="/About" exact component={About}/>
         <Route   path="/Admin" exact component={Admin}/>
-        <botton onClick={this.logout} style={{marginLeft: '25px'}}>Logout</botton>
+        <botton onClick={this.logout} style={{marginLeft: '25px'}} class="btn btn-danger" >Logout</botton>
         </Switch>
         
         </div>
